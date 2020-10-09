@@ -1,0 +1,159 @@
+
+Build Time: May 29 2020 07:26:53 EDT 
+Executable Path: C:/PROGRA~1/ANSYSI~1/v202/fluent/ntbin/win64/fluent.exe
+
+-------------------------------------------------------------------------------
+ID    Hostname  Core  O.S.         PID    Vendor                     
+-------------------------------------------------------------------------------
+n3    Hope      4/8  Windows-x64  7256   Intel(R) Core(TM) i5-8250U 
+n2    Hope      3/8  Windows-x64  12016  Intel(R) Core(TM) i5-8250U 
+n1    Hope      2/8  Windows-x64  5360   Intel(R) Core(TM) i5-8250U 
+n0*   Hope      1/8  Windows-x64  13476  Intel(R) Core(TM) i5-8250U 
+host  Hope           Windows-x64  13360  Intel(R) Core(TM) i5-8250U 
+
+MPI Option Selected: intel
+Selected system interconnect: default
+-------------------------------------------------------------------------------
+Reading "\"| gunzip -c \\"E:\IIT Bombay - Miscellaneous\ITSP - Simulation Files\ANSYS - Files\New Project\Chen2019 - Implementation - 1_files\dp0\FFF\Fluent\FFF.1-Setup-Output.cas.gz\\"\""...
+Buffering for file scan...
+
+
+
+   43054 triangular cells, zone  4, binary.
+   43054 cell partition ids, zone  4, 4 partitions, binary.
+   63906 2D interior faces, zone  1, binary.
+     150 2D velocity-inlet faces, zone  5, binary.
+     300 2D wall faces, zone  6, binary.
+     300 2D pressure-outlet faces, zone  7, binary.
+      80 2D wall faces, zone  8, binary.
+     520 2D wall faces, zone  9, binary.
+   22202 nodes, binary.
+22202 node flags, binary.
+
+Checking the existence of compiled "libudf" UDF library for current platform.
+If needed will attempt auto-compilation...
+
+ 	 Make sure that UDF source files are in the directory 
+ 	 that contains your case and data files. If you have 
+ 	 an existing libudf directory, please remove this 
+ 	 directory to ensure that latest files are used. 
+  
+Could not find input files. Found "libudf" library, loading it...
+Hope: Opening library "E:\\IIT Bombay - Miscellaneous\\ITSP - Simulation Files\\ANSYS - Files\\New Project\\Chen2019 - Implementation - 1_files\\dp0\\FFF\\Fluent\\libudf"...Done.
+
+	inlet_x_velocity
+	xmom_source
+	ymom_source
+Done.
+
+Hope: Opening library "E:\\IIT Bombay - Miscellaneous\\ITSP - Simulation Files\\ANSYS - Files\\New Project\\Chen2019 - Implementation - 1_files\\dp0\\FFF\\Fluent\\libudf"...Done.
+
+Building...
+     mesh
+	distributing mesh
+		parts....,
+		faces....,
+		nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 10643/184 = 57.8424
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	collector
+	emitter
+	outlet
+	walls
+	inlet
+	interior-fluid_domain
+	fluid_domainSetting fluid_domain (mixture) ... Done.
+ Setting zone id of fluid_domain to 4.
+ Setting zone id of interior-fluid_domain to 1.
+ Setting zone id of inlet to 5.
+ Setting zone id of walls to 6.
+ Setting zone id of outlet to 7.
+ Setting zone id of emitter to 8.
+ Setting zone id of collector to 9.
+Done.
+Setting fluid_domain (mixture) ... Done.
+Setting interior-fluid_domain (mixture) ... Done.
+Setting inlet (mixture) ... Done.
+Setting walls (mixture) ... Done.
+Setting outlet (mixture) ... Done.
+Setting emitter (mixture) ... Done.
+Setting collector (mixture) ... Done.
+
+     parallel,
+Done.
+
+Preparing mesh for display...
+Done.
+Since node values are off, changing the colormap type to "Banded".Reading "\"| gunzip -c \\"E:\IIT Bombay - Miscellaneous\ITSP - Simulation Files\ANSYS - Files\New Project\Chen2019 - Implementation - 1_files\dp0\FFF\Fluent\FFF.1-14-00125.dat.gz\\"\""...
+
+
+Parallel variables...
+Done.
+
+  iter  continuity  x-velocity  y-velocity  report-def     time/iter
+!  125 solution is converged
+   125  9.8440e-04  4.3386e-06  4.2410e-07  6.3778e+00  0:00:00  500
+
+ Reversed flow on 9 faces (3.0% area) of pressure-outlet 7.
+!  126 solution is converged
+   126  9.5459e-04  4.2234e-06  4.0902e-07  6.3778e+00  0:00:00  499
+Registering ReportDefFiles, ("E:\IIT Bombay - Miscellaneous\ITSP - Simulation Files\ANSYS - Files\New Project\Chen2019 - Implementation - 1_files\dp0\FFF\Fluent\.\\report-def-0-rfile.out")
+Registering UdfSource, ("E:/IIT Bombay - Miscellaneous/ITSP - Simulation Files/ANSYS - Files/New Project/custom_source.c" "E:/IIT Bombay - Miscellaneous/ITSP - Simulation Files/ANSYS - Files/New Project/custom_inlet_BC.c")
+Registering Udflib, ("E:/IIT Bombay - Miscellaneous/ITSP - Simulation Files/ANSYS - Files/New Project/Chen2019 - Implementation - 1_files/dp0/FFF/Fluent/libudf")
+Writing "| gzip -2cf > SolutionMonitor.gz"...
+Writing temporary file C:\\Users\\prajw\\AppData\\Local\\Temp\\flntgz-133602 ...
+Done.
+
+Writing data to E:\\IIT Bombay - Miscellaneous\\ITSP - Simulation Files\\ANSYS - Files\\New Project\\Chen2019 - Implementation - 1_files\\dp0\\FFF\\Fluent\\FFF.1.ip ...
+	x-coord
+	y-coord
+	pressure
+	x-velocity
+	y-velocity
+	hyb_init-0
+	hyb_init-1
+Done.
+Writing "| gzip -2cf > FFF.1-15.cas.gz"...
+Writing temporary file C:\\Users\\prajw\\AppData\\Local\\Temp\\flntgz-133603 ...
+   43054 triangular cells, zone  4, binary.
+   43054 cell partition ids, zone  4, 4 partitions, binary.
+   63906 2D interior faces, zone  1, binary.
+     150 2D velocity-inlet faces, zone  5, binary.
+     300 2D wall faces, zone  6, binary.
+     300 2D pressure-outlet faces, zone  7, binary.
+      80 2D wall faces, zone  8, binary.
+     520 2D wall faces, zone  9, binary.
+   22202 nodes, binary.
+   22202 node flags, binary.
+Done.
+
+Writing "| gzip -2cf > FFF.1-15-00126.dat.gz"...
+Writing temporary file C:\\Users\\prajw\\AppData\\Local\\Temp\\flntgz-133604 ...
+Done.
+
+
+Performance Timer for 1 iterations on 4 compute nodes
+  Average wall-clock time per iteration:              0.111 sec
+  Global reductions per iteration:                       76 ops
+  Global reductions time per iteration:               0.000 sec (0.0%)
+  Message count per iteration:                         5379 messages
+  Data transfer per iteration:                        0.850 MB
+  LE solves per iteration:                                1 solves
+  LE wall-clock time per iteration:                   0.074 sec (66.7%)
+  LE global solves per iteration:                         4 solves
+  LE global wall-clock time per iteration:            0.000 sec (0.0%)
+  LE global matrix maximum size:                        14
+  AMG cycles per iteration:                           4.000 cycles
+  Relaxation sweeps per iteration:                      420 sweeps
+  Relaxation exchanges per iteration:                     0 exchanges
+  LE early protections (stall) per iteration:           0.000 times
+  LE early protections (divergence) per iteration:      0.000 times
+  Total SVARS touched:                              354
+
+  Total wall-clock time:                              0.111 sec
+

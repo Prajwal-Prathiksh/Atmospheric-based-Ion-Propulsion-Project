@@ -1,0 +1,6 @@
+VERSION='2ddp_node'
+FLUENT_ARCH='win64'
+FLUENT_RELEASE='fluent20.2.0'
+CSOURCES=' $(SRC)inlet_BC.c $(SRC)mom_source.c'
+HSOURCES=' $(SRC)extfile.h'
+GPU_SUPPORT='off'

@@ -1,0 +1,190 @@
+<FluentXMLReport>
+<version>
+Fluent
+Version: 2d, dp, pbns, lam (2d, double precision, pressure-based, laminar)
+Release: 20.2.0
+Title: 
+</version>
+
+<Models>
+
+Models
+------
+
+   Model                        Settings   
+   -------------------------------------
+   Space                        2D         
+   Time                         Steady     
+   Viscous                      Laminar    
+   Heat Transfer                Disabled   
+   Solidification and Melting   Disabled   
+   Species                      Disabled   
+   Coupled Dispersed Phase      Disabled   
+   NOx Pollutants               Disabled   
+   SOx Pollutants               Disabled   
+   Soot                         Disabled   
+   Mercury Pollutants           Disabled   
+   Structure                    Disabled   
+   Acoustics                    Disabled   
+   Eulerian Wall Film           Disabled   
+   Potential/Li-ion Battery     Disabled   
+   Multiphase                   Disabled   
+
+</Models>
+
+<MaterialProperties>
+Material Properties
+-------------------
+
+   Material: air (fluid)
+
+      Property                        Units     Method     Value(s)     
+      ---------------------------------------------------------------
+      Density                         kg/m3     constant   1.225        
+      Cp (Specific Heat)              j/kg-k    constant   1006.43      
+      Thermal Conductivity            w/m-k     constant   0.0242       
+      Viscosity                       kg/m-s    constant   1.7894e-05   
+      Molecular Weight                kg/kmol   constant   28.966       
+      Thermal Expansion Coefficient   1/k       constant   0            
+      Speed of Sound                  m/s       none       #f           
+
+   Material: aluminum (solid)
+
+      Property               Units    Method     Value(s)   
+      ---------------------------------------------------
+      Density                kg/m3    constant   2719       
+      Cp (Specific Heat)     j/kg-k   constant   871        
+      Thermal Conductivity   w/m-k    constant   202.4      
+
+</MaterialProperties>
+
+<CellZoneConditions>
+Cell Zone Conditions
+--------------------
+
+   Zones
+
+      name           id   type    
+      -------------------------
+      fluid_domain   4    fluid   
+
+   Setup Conditions
+
+      fluid_domain
+
+         Condition               Value                                                                                                                                                                      
+         ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+         Specify source terms?   yes                                                                                                                                                                        
+         Source Terms            ((mass) (x-momentum ((profile udf xmom_source::libudf) (inactive . #f) (constant . 0))) (y-momentum ((profile udf ymom_source::libudf) (inactive . #f) (constant . 0))))   
+         Frame Motion?           no                                                                                                                                                                         
+
+</CellZoneConditions>
+
+<BoundaryConditions>
+Boundary Conditions
+-------------------
+
+   Zones
+
+      name        id   type              
+      --------------------------------
+      inlet       5    velocity-inlet    
+      walls       6    wall              
+      outlet      7    pressure-outlet   
+      emitter     8    wall              
+      collector   9    wall              
+
+   Setup Conditions
+
+      inlet
+
+         Condition                       Value                                    
+         ----------------------------------------------------------------------
+         Velocity Specification Method   Components                               
+         X-Velocity                      (profile udf inlet_x_velocity::libudf)   
+
+      walls
+
+         Condition                  Value             
+         ------------------------------------------
+         Wall Motion                Stationary Wall   
+         Shear Boundary Condition   No Slip           
+
+      outlet
+
+         Condition   Value   
+         -----------------
+
+      emitter
+
+         Condition                  Value             
+         ------------------------------------------
+         Wall Motion                Stationary Wall   
+         Shear Boundary Condition   No Slip           
+
+      collector
+
+         Condition                  Value             
+         ------------------------------------------
+         Wall Motion                Stationary Wall   
+         Shear Boundary Condition   No Slip           
+
+</BoundaryConditions>
+
+<SolverSettings>
+Solver Settings
+---------------
+
+   Equations
+
+      Equation   Solved   
+      -----------------
+      Flow       yes      
+
+   Numerics
+
+      Numeric                         Enabled   
+      ---------------------------------------
+      Absolute Velocity Formulation   yes       
+
+   Relaxation
+
+      Variable      Relaxation Factor   
+      -------------------------------
+      Density       1                   
+      Body Forces   1                   
+
+   Linear Solver
+
+      Variable   Solver Type   Termination Criterion   Residual Reduction Tolerance   
+      -----------------------------------------------------------------------------
+      Flow       F-Cycle       0.1                                                    
+
+   Pressure-Velocity Coupling
+
+      Parameter                            Value     
+      --------------------------------------------
+      Type                                 Coupled   
+      Pseudo Transient                     yes       
+      Explicit momentum under-relaxation   0.5       
+      Explicit pressure under-relaxation   0.5       
+
+   Discretization Scheme
+
+      Variable   Scheme                
+      ------------------------------
+      Pressure   Second Order          
+      Momentum   Second Order Upwind   
+
+   Solution Limits
+
+      Quantity                    Limit   
+      ---------------------------------
+      Minimum Absolute Pressure   1       
+      Maximum Absolute Pressure   5e+10   
+      Minimum Temperature         1       
+      Maximum Temperature         5000    
+
+</SolverSettings>
+
+</FluentXMLReport>

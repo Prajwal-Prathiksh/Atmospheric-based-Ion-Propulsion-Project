@@ -1,0 +1,5 @@
+CSOURCES= $(SRC)inlet_BC.c $(SRC)mom_source.c
+HSOURCES= $(SRC)extfile.h
+VERSION=2ddp_node
+PARALLEL_NODE=intel
+GPU_SUPPORT=off

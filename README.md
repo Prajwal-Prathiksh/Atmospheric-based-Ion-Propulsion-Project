@@ -1,4 +1,4 @@
-![team_logo](https://github.com/Jamun-Fanatic-Foreva/Atmospheric-based-Ion-Propulsion-Project/blob/main/utils/team_logo.PNG)
+[<img src="https://github.com/Jamun-Fanatic-Foreva/Atmospheric-based-Ion-Propulsion-Project" width="150"/>](image.png) 
 
 ## Team Icarus
 

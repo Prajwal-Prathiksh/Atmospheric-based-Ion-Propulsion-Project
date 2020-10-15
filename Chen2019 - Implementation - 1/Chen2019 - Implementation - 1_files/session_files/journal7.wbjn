@@ -1,0 +1,14 @@
+# encoding: utf-8
+# 2020 R2
+SetScriptVersion(Version="20.2.221")
+system1 = GetSystem(Name="FFF")
+setup1 = system1.GetContainer(ComponentName="Setup")
+fluentLauncherSettings1 = setup1.GetFluentLauncherSettings()
+fluentLauncherSettings1.SetEntityProperties(Properties=Set(EnvPath={}))
+setup1.Edit()
+setup1.SendCommand(Command='(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 0)(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 1)/file/set-tui-version "20.2"')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Ribbon*Frame1*Frame4(User-Defined)*Table1*Table3(User Defined)*PushButton2(Function Hooks)")')
+setup1.SendCommand(Command="(cx-gui-do cx-activate-item \"User-Defined Function Hooks*Table1*PushButton5(Edit)\")(cx-gui-do cx-set-list-selections \"Adjust Functions*Table1*List2(Selected Adjust Functions)\" '( 0))(cx-gui-do cx-activate-item \"Adjust Functions*Table1*List2(Selected Adjust Functions)\")(cx-gui-do cx-activate-item \"Adjust Functions*Table1*Table3*PushButton2(Remove)\")(cx-gui-do cx-activate-item \"Adjust Functions*PanelButtons*PushButton1(OK)\")")
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "User-Defined Function Hooks*PanelButtons*PushButton1(OK)")')
+setup1.SendCommand(Command='(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Solution|Run Calculation"))(cx-gui-do cx-list-tree-right-click "NavigationPane*List_Tree1" )')
+setup1.SendCommand(Command='(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-Run Calculation*Initialize & Calculate")(cx-gui-do cx-activate-item "Error*OK")')

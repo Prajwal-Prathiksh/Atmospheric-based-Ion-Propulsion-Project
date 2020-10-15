@@ -1,0 +1,5 @@
+CSOURCES= $(SRC)ehd.c
+HSOURCES=
+VERSION=2ddp_host
+PARALLEL_NODE=none
+GPU_SUPPORT=off

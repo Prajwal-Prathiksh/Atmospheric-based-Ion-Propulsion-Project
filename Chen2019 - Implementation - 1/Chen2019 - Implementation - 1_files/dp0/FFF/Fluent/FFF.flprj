@@ -1,0 +1,91 @@
+<Project type="object" class="PFolder">
+    <URL type="property" class="TPropertyType&lt;std::string&gt;" value=""/>
+    <Metadata type="object" class="Project::MetadataHoof">
+        <FormatVersion type="property" class="TPropertyType&lt;int&gt;" value="2"/>
+        <ReleaseID type="property" class="TPropertyType&lt;std::string&gt;" value="20.2"/>
+        <Subclass type="property" class="TPropertyType&lt;std::string&gt;" value="SimProject"/>
+        <CurrentSimulation type="property" class="TPropertyType&lt;std::string&gt;" value="LINK:Simulation/"/>
+        <ProjectStoragePolicy::FolderEnabled type="property" class="TPropertyType&lt;std::string&gt;" value="false"/>
+        <ProjectStoragePolicy::FolderSuffix type="property" class="TPropertyType&lt;std::string&gt;" value=".cffdb"/>
+        <ProjectStoragePolicy::SimFolder type="property" class="TPropertyType&lt;std::string&gt;" value=""/>
+    </Metadata>
+    <Simulation type="object" class="PFolder">
+        <URL type="property" class="TPropertyType&lt;std::string&gt;" value=""/>
+        <Subclass type="property" class="TPropertyType&lt;std::string&gt;" value="Simulation"/>
+        <Metadata type="object" class="Project::MetadataHoof">
+            <SimulationType type="property" class="TPropertyType&lt;std::string&gt;" value="ANSYS_FLUENT"/>
+            <MainDataType type="property" class="TPropertyType&lt;std::string&gt;" value="fluent-dat"/>
+            <CurrentRun type="property" class="TPropertyType&lt;std::string&gt;" value="LINK:RunSteady/"/>
+        </Metadata>
+        <RunSteady type="object" class="PFolder">
+            <URL type="property" class="TPropertyType&lt;std::string&gt;" value=""/>
+            <Subclass type="property" class="TPropertyType&lt;std::string&gt;" value="Run"/>
+            <Metadata type="object" class="Project::MetadataHoof">
+                <Run::OutputType type="property" class="TPropertyType&lt;std::string&gt;" value="Steady"/>
+                <Run::Variables type="property" class="TPropertyType&lt;std::string&gt;" value="solver-iteration,index,case-id,mesh-id,connectivity-id"/>
+                <Run::OutputCounter type="property" class="TPropertyType&lt;int&gt;" value="2"/>
+                <Run::CurrentOutput type="property" class="TPropertyType&lt;std::string&gt;" value="LINK:o000002/"/>
+            </Metadata>
+            <o000001 type="object" class="PFolder">
+                <URL type="property" class="TPropertyType&lt;std::string&gt;" value=""/>
+                <Subclass type="property" class="TPropertyType&lt;std::string&gt;" value="Output"/>
+                <Metadata type="object" class="Project::MetadataHoof">
+                    <index type="property" class="TPropertyType&lt;int&gt;" value="1"/>
+                    <solver-iteration type="property" class="TPropertyType&lt;int&gt;" value="20"/>
+                    <mesh-id type="property" class="TPropertyType&lt;int&gt;" value="2"/>
+                    <case-id type="property" class="TPropertyType&lt;int&gt;" value="132"/>
+                    <connectivity-id type="property" class="TPropertyType&lt;int&gt;" value="2"/>
+                </Metadata>
+                <FFF-86.cas.gz type="object" class="PFile">
+                    <URL type="property" class="TPropertyType&lt;std::string&gt;" value="FFF-86.cas.gz"/>
+                    <Subclass type="property" class="TPropertyType&lt;std::string&gt;" value="Result"/>
+                    <Metadata type="object" class="Project::MetadataHoof">
+                        <PItem::FileTime type="property" class="TPropertyType&lt;int&gt;" value="529046324"/>
+                        <DataType type="property" class="TPropertyType&lt;std::string&gt;" value="Result"/>
+                        <ResultType type="property" class="TPropertyType&lt;std::string&gt;" value="fluent-cas"/>
+                    </Metadata>
+                </FFF-86.cas.gz>
+                <FFF-86-00020.dat.gz type="object" class="PFile">
+                    <URL type="property" class="TPropertyType&lt;std::string&gt;" value="FFF-86-00020.dat.gz"/>
+                    <Subclass type="property" class="TPropertyType&lt;std::string&gt;" value="Result"/>
+                    <Metadata type="object" class="Project::MetadataHoof">
+                        <PItem::FileTime type="property" class="TPropertyType&lt;int&gt;" value="529046325"/>
+                        <DataType type="property" class="TPropertyType&lt;std::string&gt;" value="Result"/>
+                        <ResultType type="property" class="TPropertyType&lt;std::string&gt;" value="fluent-dat"/>
+                        <Case type="property" class="TPropertyType&lt;std::string&gt;" value="LINK:FFF-86.cas.gz"/>
+                    </Metadata>
+                </FFF-86-00020.dat.gz>
+            </o000001>
+            <o000002 type="object" class="PFolder">
+                <URL type="property" class="TPropertyType&lt;std::string&gt;" value=""/>
+                <Subclass type="property" class="TPropertyType&lt;std::string&gt;" value="Output"/>
+                <Metadata type="object" class="Project::MetadataHoof">
+                    <index type="property" class="TPropertyType&lt;int&gt;" value="2"/>
+                    <solver-iteration type="property" class="TPropertyType&lt;int&gt;" value="40"/>
+                    <mesh-id type="property" class="TPropertyType&lt;int&gt;" value="2"/>
+                    <case-id type="property" class="TPropertyType&lt;int&gt;" value="194"/>
+                    <connectivity-id type="property" class="TPropertyType&lt;int&gt;" value="2"/>
+                </Metadata>
+                <FFF-86.cas.gz type="object" class="PFile">
+                    <URL type="property" class="TPropertyType&lt;std::string&gt;" value="FFF-86.cas.gz"/>
+                    <Subclass type="property" class="TPropertyType&lt;std::string&gt;" value="Result"/>
+                    <Metadata type="object" class="Project::MetadataHoof">
+                        <PItem::FileTime type="property" class="TPropertyType&lt;int&gt;" value="529046324"/>
+                        <DataType type="property" class="TPropertyType&lt;std::string&gt;" value="Result"/>
+                        <ResultType type="property" class="TPropertyType&lt;std::string&gt;" value="fluent-cas"/>
+                    </Metadata>
+                </FFF-86.cas.gz>
+                <FFF-86-00040.dat.gz type="object" class="PFile">
+                    <URL type="property" class="TPropertyType&lt;std::string&gt;" value="FFF-86-00040.dat.gz"/>
+                    <Subclass type="property" class="TPropertyType&lt;std::string&gt;" value="Result"/>
+                    <Metadata type="object" class="Project::MetadataHoof">
+                        <PItem::FileTime type="property" class="TPropertyType&lt;int&gt;" value="529046334"/>
+                        <DataType type="property" class="TPropertyType&lt;std::string&gt;" value="Result"/>
+                        <ResultType type="property" class="TPropertyType&lt;std::string&gt;" value="fluent-dat"/>
+                        <Case type="property" class="TPropertyType&lt;std::string&gt;" value="LINK:FFF-86.cas.gz"/>
+                    </Metadata>
+                </FFF-86-00040.dat.gz>
+            </o000002>
+        </RunSteady>
+    </Simulation>
+</Project>

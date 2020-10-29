@@ -9,7 +9,8 @@ extern DEFINE_ADJUST(Compute_Electric_Field, domain);
 extern DEFINE_SOURCE(PHI_source, c, t, dS, eqn);
 extern DEFINE_SOURCE(x_mom_source, c, t, dS, eqn);
 extern DEFINE_SOURCE(y_mom_source, c, t, dS, eqn);
-extern DEFINE_UDS_FLUX(RHO_Q_flux, f, t, i);
+extern DEFINE_SOURCE(RHO_Q_source, c, t, dS, eqn);
+extern DEFINE_UDS_FLUX(RHO_Q_flux,f,t,i);
 __declspec(dllexport) UDF_Data udf_data[] = {
 {"UDS_Vars", (void(*)())UDS_Vars, UDF_TYPE_EXECUTE_ON_LOADING},
 {"Rename_UDS_Vars", (void(*)())Rename_UDS_Vars, UDF_TYPE_ON_DEMAND},
@@ -17,6 +18,7 @@ __declspec(dllexport) UDF_Data udf_data[] = {
 {"PHI_source", (void(*)())PHI_source, UDF_TYPE_SOURCE},
 {"x_mom_source", (void(*)())x_mom_source, UDF_TYPE_SOURCE},
 {"y_mom_source", (void(*)())y_mom_source, UDF_TYPE_SOURCE},
+{"RHO_Q_source", (void(*)())RHO_Q_source, UDF_TYPE_SOURCE},
 {"RHO_Q_flux", (void(*)())RHO_Q_flux, UDF_TYPE_UDS_FLUX},
 };
 __declspec(dllexport) int n_udf_data = sizeof(udf_data)/sizeof(UDF_Data);

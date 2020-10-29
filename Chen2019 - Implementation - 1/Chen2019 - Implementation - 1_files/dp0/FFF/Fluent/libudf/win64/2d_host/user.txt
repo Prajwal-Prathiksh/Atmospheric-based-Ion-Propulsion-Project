@@ -1,6 +1,0 @@
-VERSION='2d_host'
-FLUENT_ARCH='win64'
-FLUENT_RELEASE='fluent20.2.0'
-CSOURCES=' $(SRC)ehd.c'
-HSOURCES=''
-GPU_SUPPORT='off'
